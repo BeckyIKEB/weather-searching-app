@@ -14,7 +14,7 @@ function SearchResults() {
   const searchLocation = () => {
     setLoading(true);
     setError(null);
-    const url = `http://api.weatherapi.com/v1/current.json?key=8cc2758af06a4d7aa7b55912231202&q=${location}&aqi=no`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=a5fc560c79f632c42e3aa0279420c497`;
       
     axios.get(url)
       .then(response => {
@@ -123,16 +123,16 @@ function SearchResults() {
       <div className='results-container'>
           <h2>Results:-</h2>
           <div className="city">
-            <p>{data.location?.name || ''}</p>
+            <p>{data.name || ''}</p>
           </div>
           <div className="temp">
-            <p>{data.current?.temp_c || 0}°c</p>
+            <p>{data.main?.temp || 0}°c</p>
           </div>
           <div className="humidity">
-            <p>{data.current?.humidity || 0}%</p>
+            <p>{data.main?.humidity || 0}%</p>
           </div>
           <div className="wind-speed">
-            <p>{data.current?.wind_kph || 0}km/h</p>
+            <p>{data.wind?.speed || 0}km/h</p>
           </div>
       </div>
           {loading && <div className="loading">Loading...
