@@ -3,7 +3,6 @@ import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-
 function SearchResults() {
   const [data, setData] = useState({});
   const [count, setCount] = useState(0);
