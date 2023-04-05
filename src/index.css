@@ -1,113 +1,97 @@
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-@media only screen and (max-width: 768px) {
-  body {
-    background-size: contain;
-  }
-}
-
-
 .bg-style {
-  background-image: url(/src/image/Bk-image.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh;
+  background-color: #f1f1f1;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
-/* Title styling */
 h1 {
   font-size: 30px;
+  margin-bottom: 20px;
   text-align: center;
-  border: 1px solid black;
-  padding: 5px 0;
-  margin-top: 2px;
-  background-color: antiquewhite;
+  background-color: #494848;
+  color: #f1f1f1;
 }
 
-/* Search area and its button styling */
 .search-area {
-  margin: 10px 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .primary-input {
-  padding: 5px 5px;
-  margin: 5px 5px;
-}
-
-/* Filterin section styling */
-.filter-section {
-  flex-direction:column;
-  margin-top: 20px;
-  justify-content: center;
-  text-align: center;
-  font-size: 25px;
-  color:royalblue;
-  font-weight: bolder;
-}
-
-.filter-section h2 {
-  color: black;
-  display: block;
-  width: 300px;
-  height: 50px;
-  background-color: lightblue;
-  text-align: center;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
   padding: 10px;
-  margin: 20px auto;
-  border-radius: 5px;
+  flex: 1;
+}
+
+.btn {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+
+.filter-section {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+.form-check-input {
+  margin-right: 10px;
 }
 
 .results-container {
-  margin-top: 50px;
-  display: block;
-  flex-direction:column;
-  flex-wrap: wrap;
-  justify-content:center;
-  text-align: center;
-  color: rgb(31, 21, 7);
-  font-size: 25px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.city {
+  font-size: 24px;
   font-weight: bold;
-  
+  margin-bottom: 10px;
 }
 
-.results-container h2 {
-  color: black;
-  display: block;
-  width: 300px;
-  height: 50px;
-  background-color: lightblue;
-  text-align: center;
+.temp, .humidity, .wind-speed {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.loading, .error {
+  background-color: #ffc107;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
   padding: 10px;
-  margin: 20px auto;
-  border-radius: 5px;
-}
-
-input[type="checkbox"] {
-  display: none;
-  text-align: center !important;
-
+  text-align: center;
 }
 
 .loading-message {
+  font-size: 16px;
   text-align: center;
-  color: darkblue;
-  font-weight: bold;
+}
+
+.footer {
+  background-color: #494848;
+  padding: 20px;
+  text-align: center;
+  color: #ccc;
 }
