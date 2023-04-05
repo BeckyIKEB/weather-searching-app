@@ -5,7 +5,6 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function SearchResults() {
   const [data, setData] = useState({});
-  const [count, setCount] = useState(0);
   const [location, setLocation] = useState(''); 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -19,7 +18,6 @@ function SearchResults() {
       .then(response => {
         setData(response.data);
         setLoading(false);
-        setCount(Object.keys(response.data).length);
       })
       .catch(error => {
         console.error(error);
@@ -28,18 +26,6 @@ function SearchResults() {
       });
 
   }
-
-  let resultCount;
-    if (Object.keys(data).length === 0) {
-      resultCount = "Loading...";
-    } else if (error) {
-      resultCount = "An error occurred.";
-    } else if (loading.length === 0) {
-      resultCount = "No results found.";
-    } else {
-      resultCount = `Showing ${count.length} results.`;
-    }
-
 
   return (
     
@@ -65,7 +51,7 @@ function SearchResults() {
     
       {/* Filtering option checkbox */}
       <div className="filter-section">
-        <h2>Filter By:-</h2>
+        <h2>Filter By</h2>
         <div className="form-check">
           <input
               className="form-check-input"
@@ -120,7 +106,7 @@ function SearchResults() {
       </div>
 
       <div className='results-container'>
-          <h2>Results:-</h2>
+          <h2>Results</h2>
           <div className="city">
             <p>{data.name || ''}</p>
           </div>
@@ -137,9 +123,9 @@ function SearchResults() {
           {loading && <div className="loading">Loading...
       </div>}
           {error && <div className="error">{error}</div>}
-      <div className='loading-message'>
-          <p>{resultCount}</p>
-          {/* Display the results */}
+      
+      <div className="footer">
+        <p>Copyright © 2023 Becky Satore</p>
       </div>
       
     </div>
